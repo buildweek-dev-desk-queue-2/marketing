@@ -1,8 +1,9 @@
 #intro-section {
+    background-image: url("../image/background-fodder-1.png"), url("../image/background-fodder-2.png");
+    background-size: 100px;
     background-color: @bg-color;
-    background-position: center;
+    background-position: 10% 15%, 90% 60%;
     background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
     padding: 10% 0 20% 0;
 
@@ -28,12 +29,20 @@
             width: 40%;
             color: @text-color;
             padding-bottom: 5%;
+
+            @media @mobile {
+                width: 80%;
+            }
         }
 
         .button-container {
             width: 50%;
             display: flex;
             justify-content: space-around;
+
+            @media @mobile {
+                width: 80%;
+            }
         }
     }
 }
@@ -69,16 +78,43 @@
         align-items: center;
         padding-bottom: 5%;
 
+        i {
+            font-size: 2rem;
+        }
+
+        .fa-angle-right{
+            display: inline;
+        }
+        .fa-angle-down{
+            display: none;
+        }
+
+        @media @tablet {
+            flex-direction: column;
+
+            .fa-angle-right{
+                display: none;
+            }
+            .fa-angle-down{
+                display: inline;
+            }
+        }
+
         .step-container{
             // Block
             width: 28%;
             border-radius: 10px;
             text-align: center;
             .neo-shadow();
-    
+
+            
+            @media @tablet{
+                width: 90%;
+            }
+
             h3 {
                 padding: 5% 0;
-                font-size: 2rem;
+                font-size: 1.8rem;
                 font-weight: 700;
                 border-bottom: 2px solid @shadow;
             }
@@ -92,14 +128,10 @@
                 padding: 5% 8% 10%;
             }
         }
-    
-        i {
-            font-size: 2rem;
-        }
     }
 }
 
 footer {
-    background-color: @lambda-red;
-    padding: 2% 0;
+    background-color: @main-accent;
+    padding: 5px 0;
 }

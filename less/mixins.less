@@ -4,8 +4,16 @@
     box-shadow: 4px 4px 5px #D1D9E6, -4px -4px 5px #FFF;
 }
 
+.neo-shadow-bigger(){ // For hover effects
+    box-shadow: 8px 8px 10px #D1D9E6, -8px -8px 10px #FFF;
+}
+
 .reg-shadow(){
     box-shadow: 4px 4px 5px #D1D9E6;
+}
+
+.reg-shadow-bigger(){
+    box-shadow: 8px 8px 10px #D1D9E6;
 }
 
 .button-rounded-filled {
@@ -23,6 +31,14 @@
     color: @text-color-light;
 
     .reg-shadow();
+    transition: 0.5s;
+    
+    &:hover{
+        transition: 0.5s;
+        background-color: @main-accent-light;
+
+        .reg-shadow-bigger()
+    }
 }
 
 .button-rounded-neo {
@@ -39,4 +55,12 @@
     color: @text-color;
 
     .neo-shadow();
+    transition: 0.5s;
+
+    &:hover{
+        transition: 0.5s;
+        color: @main-accent;
+
+        .neo-shadow-bigger()
+    }
 }

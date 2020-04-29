@@ -94,6 +94,12 @@
   text-decoration: none;
   color: #FFFFFF;
   box-shadow: 4px 4px 5px #D1D9E6;
+  transition: 0.5s;
+}
+.button-rounded-filled:hover {
+  transition: 0.5s;
+  background-color: #6666ff;
+  box-shadow: 8px 8px 10px #D1D9E6;
 }
 .button-rounded-neo {
   width: 40%;
@@ -106,6 +112,12 @@
   text-decoration: none;
   color: #8FA0B8;
   box-shadow: 4px 4px 5px #D1D9E6, -4px -4px 5px #FFF;
+  transition: 0.5s;
+}
+.button-rounded-neo:hover {
+  transition: 0.5s;
+  color: #2928F5;
+  box-shadow: 8px 8px 10px #D1D9E6, -8px -8px 10px #FFF;
 }
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -240,17 +252,20 @@ body {
   color: #8FA0B8;
 }
 header {
+  border-top: 10px solid #2928F5;
   padding: 2% 0;
   display: flex;
   align-items: center;
-  background-color: #ECF0F3;
+  background: #ecf0f3;
+  background: linear-gradient(0deg, #ecf0f3 0%, #dcdee0 90%);
   justify-content: space-between;
 }
 header h1 {
   font-size: 2rem;
+  font-weight: 900;
   width: 15%;
   text-align: center;
-  color: #8FA0B8;
+  color: #2928F5;
 }
 header nav {
   width: 60%;
@@ -258,22 +273,27 @@ header nav {
   justify-content: flex-end;
 }
 header nav a {
+  text-align: center;
   font-size: 1rem;
   color: #8FA0B8;
-  width: 10%;
+  width: 15%;
   text-decoration: none;
   transition: 0.5s;
 }
 header nav a:hover {
   transition: 0.5s;
-  color: #2A344D;
+  color: #2928F5;
   text-shadow: 0px 3px 4px #b5bcc7;
 }
+header nav a i {
+  margin-right: 5%;
+}
 #intro-section {
+  background-image: url("../image/background-fodder-1.png"), url("../image/background-fodder-2.png");
+  background-size: 100px;
   background-color: #ECF0F3;
-  background-position: center;
+  background-position: 10% 15%, 90% 60%;
   background-repeat: no-repeat;
-  background-size: cover;
   position: relative;
   padding: 10% 0 20% 0;
   display: flex;
@@ -298,10 +318,20 @@ header nav a:hover {
   color: #8FA0B8;
   padding-bottom: 5%;
 }
+@media (max-width: 500px) {
+  #intro-section .intro-container p {
+    width: 80%;
+  }
+}
 #intro-section .intro-container .button-container {
   width: 50%;
   display: flex;
   justify-content: space-around;
+}
+@media (max-width: 500px) {
+  #intro-section .intro-container .button-container {
+    width: 80%;
+  }
 }
 #process {
   border-top: 4px solid #D1D9E6;
@@ -328,15 +358,40 @@ header nav a:hover {
   align-items: center;
   padding-bottom: 5%;
 }
+#process .steps i {
+  font-size: 2rem;
+}
+#process .steps .fa-angle-right {
+  display: inline;
+}
+#process .steps .fa-angle-down {
+  display: none;
+}
+@media (max-width: 800px) {
+  #process .steps {
+    flex-direction: column;
+  }
+  #process .steps .fa-angle-right {
+    display: none;
+  }
+  #process .steps .fa-angle-down {
+    display: inline;
+  }
+}
 #process .steps .step-container {
   width: 28%;
   border-radius: 10px;
   text-align: center;
   box-shadow: 4px 4px 5px #D1D9E6, -4px -4px 5px #FFF;
 }
+@media (max-width: 800px) {
+  #process .steps .step-container {
+    width: 90%;
+  }
+}
 #process .steps .step-container h3 {
   padding: 5% 0;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   border-bottom: 2px solid #D1D9E6;
 }
@@ -347,10 +402,7 @@ header nav a:hover {
 #process .steps .step-container p {
   padding: 5% 8% 10%;
 }
-#process .steps i {
-  font-size: 2rem;
-}
 footer {
-  background-color: #ec3944;
-  padding: 2% 0;
+  background-color: #2928F5;
+  padding: 5px 0;
 }
