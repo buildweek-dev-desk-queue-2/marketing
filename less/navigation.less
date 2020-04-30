@@ -12,18 +12,28 @@ header {
     }
 
     h1 {
+        margin-left: 3%;
         font-size: 2rem;
         font-weight: 900;
-        width: 15%;
         text-align: center;
         color: @main-accent;
     }
 
     nav {
+        margin-right: 3%;
         width: 60%;
         display: flex;
         justify-content: flex-end;
-        
+
+        @media @tablet {
+            width: 70%;
+            justify-content: space-around;
+        }
+
+        @media @mobile {
+            width: 90%;
+            margin-top: 5%;
+        }
         a {
             text-align: center;
             font-size: 1rem;
@@ -32,14 +42,28 @@ header {
             text-decoration: none;
             transition: 0.5s;
 
+            @media @tablet{
+                width: 20%;
+            }
+
             &:hover {
                 transition: 0.5s;
                 color: @main-accent;
-                text-shadow: 0px 3px 4px rgb(181, 188, 199);
+                text-shadow: 0px 3px 5px rgb(181, 188, 199);
             }
 
             i {
                 margin-right: 5%;
+            }
+        }
+
+        .current-location{
+            color: @text-color-heading;
+
+            &:hover { // Disable hover of anchor link
+                transition: 0.5s;
+                color: @text-color-heading;
+                text-shadow: 0px 3px 5px rgb(181, 188, 199);
             }
         }
     }
