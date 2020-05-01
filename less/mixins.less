@@ -1,0 +1,66 @@
+// Mixins
+
+.neo-shadow(){
+    box-shadow: 4px 4px 5px #D1D9E6, -4px -4px 5px #FFF;
+}
+
+.neo-shadow-bigger(){ // For hover effects
+    box-shadow: 8px 8px 10px #D1D9E6, -8px -8px 10px #FFF;
+}
+
+.reg-shadow(){
+    box-shadow: 4px 4px 5px #D1D9E6;
+}
+
+.reg-shadow-bigger(){
+    box-shadow: 8px 8px 10px #D1D9E6;
+}
+
+.button-rounded-filled {
+    // Sizing
+    width: 40%;
+    padding: 4% 3%;
+    border-radius: 100px;
+    background-color: @main-accent;
+    // Text
+    font-family: @font-roboto;
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: @text-color-light;
+
+    .reg-shadow();
+    transition: 0.5s;
+    
+    &:hover{
+        transition: 0.5s;
+        background-color: @main-accent-light;
+
+        .reg-shadow-bigger()
+    }
+}
+
+.button-rounded-neo {
+    // Sizing
+    width: 40%;
+    padding: 4% 3%;
+    border-radius: 100px;
+    background-color: #ECF0F3;
+    // Text
+    font-family: @font-roboto;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    color: @text-color;
+
+    .neo-shadow();
+    transition: 0.5s;
+
+    &:hover{
+        transition: 0.5s;
+        color: @main-accent;
+
+        .neo-shadow-bigger()
+    }
+}

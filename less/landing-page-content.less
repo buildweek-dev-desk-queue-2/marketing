@@ -1,0 +1,141 @@
+#intro-section {
+    background-image: url("../image/background-fodder-1.png"), url("../image/background-fodder-2.png");
+    background-size: 100px;
+    background-position: 10% 15%, 90% 60%;
+    background-repeat: no-repeat;
+    background-color: @bg-color;
+    position: relative;
+    padding: 10% 0 20% 0;
+
+    display: flex;
+    align-items: center;
+
+    @media @mobile {
+        background-image: url(); // Delete background fodder on mobile
+    }
+
+    .intro-container{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            color: @text-color-heading;
+            padding-bottom: 3%;
+            font-size: 3rem;
+            font-weight: 900;
+        }
+
+        p {
+            width: 40%;
+            color: @text-color;
+            padding-bottom: 5%;
+
+            @media @mobile {
+                width: 80%;
+            }
+        }
+
+        .button-container {
+            width: 50%;
+            display: flex;
+            justify-content: space-around;
+
+            @media @mobile {
+                width: 80%;
+            }
+        }
+    }
+}
+
+#process {
+    // Divider
+    border-top: 4px solid @shadow;
+    // Block
+    padding: 3% 0;
+    // Style
+    background-color: @bg-color;
+
+    h2 {
+        padding-bottom: 3.5%;
+        font-size: 2rem;
+        font-weight: 300;
+        text-align: center;
+        i {
+            // Block
+            border-radius: 5px;
+            padding: 14px 20px;
+            margin-right: 2%;
+            // Style
+            color: @main-accent;
+            font-size: 1.5rem;
+            .neo-shadow();
+        }
+    }
+    
+    .steps {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-bottom: 5%;
+
+        i {
+            font-size: 2rem;
+        }
+
+        .fa-angle-right{
+            display: inline;
+        }
+        .fa-angle-down{
+            display: none;
+        }
+
+        @media @tablet {
+            flex-direction: column;
+
+            .fa-angle-right{
+                display: none;
+            }
+            .fa-angle-down{
+                display: inline;
+            }
+        }
+
+        .step-container{
+            // Block
+            width: 28%;
+            border-radius: 10px;
+            text-align: center;
+            .neo-shadow();
+
+            
+            @media @tablet{
+                width: 90%;
+            }
+
+            h3 {
+                padding: 5% 0;
+                font-size: 1.8rem;
+                font-weight: 700;
+                border-bottom: 2px solid @shadow;
+            }
+            
+            i {
+                padding-top: 5%;
+                color: @main-accent;
+            }
+    
+            p {
+                padding: 5% 8% 10%;
+            }
+        }
+    }
+}
+
+footer {
+    background-color: @main-accent;
+    padding: 5px 0;
+}
